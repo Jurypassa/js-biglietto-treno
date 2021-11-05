@@ -1,8 +1,17 @@
-const Km = prompt("inserisci numero Km");
+const Km = parseInt(prompt("inserisci numero Km"));
 console.log(Km);
 
-const età = prompt("inserisci la tua età");
+if (isNaN(Km)){
+    alert ("Non è un numero");
+} 
+
+const età = parseInt(prompt("inserisci la tua età"));
 console.log(età);
+ 
+
+if(isNaN(età)){
+    alert ("Non è un numero");
+}
 
 let prezzo = 0.21;
 
@@ -16,11 +25,16 @@ if (età < 18){
      document.getElementById("prova").innerHTML = U18;
      console.log(U18);
 
-}   if (età > 65){
+}   else if (età > 65){
 
     let O65 = prezzoKm - (prezzoKm * 40 / 100);
     O65 = O65.toFixed(2);
     document.getElementById("prova").innerHTML = O65;
     console.log(O65);
+
+}   else {
+    
+    document.getElementById("prova").innerHTML = prezzoKm;
+
 }
 
