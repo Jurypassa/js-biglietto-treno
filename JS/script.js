@@ -4,17 +4,21 @@ console.log(Km);
 const età = prompt("inserisci la tua età");
 console.log(età);
 
-let prezzo = 0.21
+let prezzo = 0.21;
 
-const prezzoKm = 0.21 * Km
+const prezzoKm = 0.21 * Km;
 console.log(prezzoKm);
 
 if (età < 18){
-     const U18 = prezzoKm - (prezzoKm * 20 / 100)
-     console.log(U18);
-}
 
-if (età > 65){
-    const O65 = prezzoKm - (prezzoKm * 40 / 100)
+     const U18 = prezzoKm - (prezzoKm * 20 / 100);
+     document.getElementById("prova").innerHTML = U18;
+     console.log(U18);
+
+}   if (età > 65){
+
+    const O65 = prezzoKm - (prezzoKm * 40 / 100);
+    document.getElementById("prova").innerHTML = O65;
     console.log(O65);
 }
+
